@@ -18,6 +18,11 @@
 
     <title>My First Bootstrap</title>
     <style>
+       body{
+           background-image: url(
+               "https://www.crushpixel.com/big-static15/preview4/abstract-geometric-white-grey-hexagonal-1939953.jpg"
+           );
+       }
       .cards {
         display: grid;
         grid-template-columns: auto auto;
@@ -32,6 +37,25 @@
         background-color: #f9f9f9;
         border-top: 0.05rem solid #e5e5e5;
       }
+      @media only screen and (max-width: 800px) {
+        .cards {
+          display: grid;
+          grid-template-columns: auto;
+          align-items: center;
+          justify-content: center;
+          grid-gap: 2vh 10vw;
+        }
+      }
+      .buttons{
+          display: grid;
+          grid-template-columns: auto auto auto auto auto auto auto;
+          justify-content: center;
+          align-items: center;
+          grid-row-gap: 2vh;
+          margin: 10px;
+          grid-gap: 1px 2vw;
+      }
+    
     </style>
   </head>
   <body>
@@ -93,7 +117,7 @@
             placeholder="Search Here"
             aria-label="Search"
           />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
             Search
           </button>
         </form>
@@ -108,32 +132,30 @@
     </div>
   </div> -->
     <div class="alert alert-light" role="alert">
-      <span class="rounded bg-secondary text-light">New</span>Check out my
-      Favorite Character! <a href="#" class="alert-link"><u>here</u></a
+      <span class="rounded bg-secondary text-light">new</span>Check out my
+      Favorite Character! <a href="https://myanimelist.net/character/128909/Kiyotaka_Ayanokouji" class="alert-link"><u>here</u></a
       >. Give it a click if you like.
     </div>
     <div class="buttons">
-      <button type="button" class="btn btn-outline-primary">Home</button>
-      <button type="button" class="btn btn-outline-secondary">
-        Characters
-      </button>
-      <button type="button" class="btn btn-outline-secondary">Anime</button>
-      <button type="button" class="btn btn-outline-secondary">Manga</button>
-      <button type="button" class="btn btn-outline-secondary">
-        Light Novels
-      </button>
-      <button type="button" class="btn btn-outline-secondary">Manhwa</button>
-      <button type="button" class="btn btn-outline-dark">News</button>
+        <a class="btn btn-outline-primary" href="#" role="button">Home</a>
+               
+               <a class="btn btn-outline-secondary" href="https://myanimelist.net/character.php" target="_main" role="button">Characters</a>
+               <a class="btn btn-outline-secondary" href="https://myanimelist.net/topanime.php" target="_main"  role="button">Anime</a>
+               <a class="btn btn-outline-secondary" href="https://myanimelist.net/topmanga.php?type=manga"  target="_main"  role="button">Manga</a>
+               <a class="btn btn-outline-secondary" href="https://myanimelist.net/topmanga.php?type=lightnovels" target="_main"  role="button">Light Novels</a>
+               <a class="btn btn-outline-secondary" href="https://myanimelist.net/topmanga.php?type=manhwa" target="_main"  role="button">Manhwa</a>
+               <a class="btn btn-outline-dark" href="https://myanimelist.net/"  target="_main"  role="button">News</a>
+     
     </div>
     <br />
     <br />
-
-    <div class="cards">
+    <!-- <h2><b> <pre>  Popular Articles</pre> </b></h2> -->
+    <div class="cards col-6 col-md-12">
       <div class="card mb-3" style="max-width: 540px">
         <div class="row g-0">
           <div class="col-md-4">
             <img
-              src="https://www.ubuy.co.in/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvODFRT3g5aWViR0wuX0FDX1NMMTUwMF8uanBn.jpg"
+              src="https://i.pinimg.com/736x/1f/0f/9c/1f0f9c82bf4c72e9fc3d55a358c88484.jpg"
               class="img-fluid rounded-start"
               alt="..."
               height="290px"
@@ -141,7 +163,11 @@
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Anime</h5>
+              <h5 class="card-title"><b> <u>
+
+                  
+                  Anime</h5></b> 
+                </u>
               <p class="card-text">
                 Click here to know more about my taste in Anime, The anime I
                 have Watched, anime Im watching this season, my favorite Genres,
@@ -158,14 +184,14 @@
         <div class="row g-0">
           <div class="col-md-4">
             <img
-              src="https://w0.peakpx.com/wallpaper/833/852/HD-wallpaper-mix-scan-manga-kakashi-kaneki-killua-otaku-ryuk-titan.jpg"
+              src="https://i.pinimg.com/originals/b2/cc/f5/b2ccf59b8853c718861e88bd93b5b6f3.jpg"
               alt="..."
               height="250px"
             />
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Manga</h5>
+              <h5 class="card-title"><b> <u> Manga</h5></u></b>
               <p class="card-text">
                 Click here to know more about my taste in Manga, The Manga I
                 have Read, Ongoing Titles That I'm Currently Reading, my
@@ -190,7 +216,7 @@
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Light Novels</h5>
+              <h5 class="card-title"><b><u>Light Novels</h5></u></b> 
               <p class="card-text">
                 Click here to know more about my taste in Light Novels, The
                 Novels I have Read, Ongoing Titles That I'm Currently Reading,
@@ -216,7 +242,7 @@
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Manhwa</h5>
+              <h5 class="card-title"> <b><u> Manhwa</h5></u></b>
               <p class="card-text">
                 Click here to know more about my taste in Light Novels, The
                 Novels I have Read, Ongoing Titles That I'm Currently Reading,
@@ -233,10 +259,7 @@
       </div>
     </div>
     <footer class="blog-footer">
-      <p>
-        
-       Copyright &copy; KAZIM AYAAN PS 
-      </p>
+      <p>Copyright &copy; KAZIM AYAAN PS</p>
       <p>
         <a href="#">Back to top</a>
       </p>
